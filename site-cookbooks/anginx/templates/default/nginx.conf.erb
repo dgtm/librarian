@@ -1,0 +1,8 @@
+server {
+    listen 80 default;
+    
+    access_log <%= node.anginx.web_dir %>/logs/nginx_access.log;
+    error_log <%= node.anginx.web_dir %>/logs/nginx_error.log;
+    keepalive_timeout 10;
+    root <%= node.anginx.web_dir %>/public;
+}
