@@ -16,10 +16,10 @@ template "#{node.unicorn.config_path}/#{node.rails.app_name}" do
   variables deployer: node.rails.deployer, deployer_group: "vagrant"
 end
 
-# template "#{node.nginx.dir}/sites-available/#{node.rails.app_name}.conf" do
-#   source "nginx.conf.erb"
-#   mode 0644
-#   notifies :reload, 'service[nginx]'
-# end
+template "#{node.nginx.dir}/sites-available/#{node.rails.app_name}.conf" do
+  source "nginx.conf.erb"
+  mode 0644
+  notifies :reload, 'service[nginx]'
+end
 
-# nginx_site "#{node.rails.app_name}.conf"
+nginx_site "#{node.rails.app_name}.conf"
