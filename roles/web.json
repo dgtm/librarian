@@ -4,13 +4,7 @@
   "json_class": "Chef::Role",
   "description": "The base role for systems that serve HTTP traffic",
   "default_attributes": {
-    "anginx" : {
-          "app": "angie",
-          "web_dir": "/var/data/www/apps/angie"
-    },
-    "user":{
-      "name": "vagrant"
-    },
+
     "nginx": {
       "version": "1.3.13",
       "init_style":"init",
@@ -22,7 +16,7 @@
     }
   },
   "run_list": [
-    "recipe[nginx::source]",
-    "recipe[anginx]"
+      // "recipe[nginx::source]",
+    "recipe[rails]"
   ]
 }
