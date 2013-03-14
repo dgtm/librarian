@@ -23,6 +23,7 @@
     }
   },
   "run_list": [
+    "recipe[nginx::source]","recipe[unicorn]",
     "recipe[rails]"
   ]
 }

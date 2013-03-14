@@ -19,8 +19,11 @@ Vagrant::Config.run do |config|
      chef.data_bags_path = "data_bags"
      chef.provisioning_path = "/tmp/vagrant-chef"
      # You may also specify custom JSON attributes:
-     chef.json = VAGRANT_JSON
+          chef.add_recipe("unicorn")
+     chef.add_recipe("nginx")
+          chef.add_recipe("rails")
      chef.add_role("web")
+     chef.json = VAGRANT_JSON
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,

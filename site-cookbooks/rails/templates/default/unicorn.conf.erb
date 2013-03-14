@@ -1,9 +1,9 @@
 # Cloudfactory configuration file for Unicorn (not Rack) when used
 # with daemonization (unicorn_rails -D) started in your working directory.
 
-rails_env = <%= @node[:rails][:env] %> || ENV['RAILS_ENV']
+rails_env = "<%= @node[:rails][:env] %>" || ENV['RAILS_ENV']
 
-app_path = "/home/<%= @deployer %>/<%= @node[:rails][:root]} %>/current"
+app_path = "/home<%= @node[:rails][:app_root] %>/current"
 
 
 

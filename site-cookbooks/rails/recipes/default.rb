@@ -1,5 +1,4 @@
 include_recipe 'pry'
-# include_recipe 'ohai'
 include_recipe 'nginx::source'
 include_recipe 'unicorn'
 

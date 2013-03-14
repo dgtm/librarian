@@ -4,7 +4,7 @@
 site 'http://community.opscode.com/api/v1'
 
   cookbook 'nginx', :git => 'git://github.com/opscode-cookbooks/nginx.git'
-
+  cookbook 'redis2', git: "git://github.com/Fewbytes/redis2-cookbook.git"
 # cookbook 'apache2', '>= 1.0.0'
 
 # cookbook 'rvm',
